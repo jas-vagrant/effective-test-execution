@@ -1,6 +1,6 @@
 package com.testvagrant.example.Implementation;
 
-class ScientificCalculator extends CalculatorImplementation {
+public class ScientificCalculator extends CalculatorImplementation {
 
     public double sin(double angle) {
         return Math.sin(Math.toRadians(angle));
