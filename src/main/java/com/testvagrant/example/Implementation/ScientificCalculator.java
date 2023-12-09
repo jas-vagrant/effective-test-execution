@@ -1,4 +1,4 @@
-package com.testvagrant.example.Implementation;
+package com.testvagrant.example.implementation;
 
 public class ScientificCalculator extends CalculatorImplementation {
 
