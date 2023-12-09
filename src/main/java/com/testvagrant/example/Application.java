@@ -1,13 +1,17 @@
 package com.testvagrant.example;
+
 import com.testvagrant.example.Implementation.BasicCalculator;
 import com.testvagrant.example.Implementation.CalculatorImplementation;
 import com.testvagrant.example.Implementation.ScientificCalculator;
 import com.testvagrant.example.factory.CalculatorType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
 public class Application {
     Scanner scanner = new Scanner(System.in);
+    private static final Logger log = LoggerFactory.getLogger(Application.class);
     Double result;
 
     public static void main(String[] args) {
@@ -16,15 +20,16 @@ public class Application {
         int choice;
 
         do {
-            System.out.println("Select operation:");
-            System.out.println("1. Basic Calculator");
-            System.out.println("2. Scientific Calculator");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice (1-3): ");
+            log.info("Select an option:");
+            log.info("1. Basic Calculator");
+            log.info("2. Scientific Calculator");
+            log.info("3. Exit");
+            log.info("Enter your choice (1-3): ");
 
             choice = scanner.nextInt();
             if(choice == 3){
-                System.out.println();
+                log.info("The user chose to exit");
+                break;
             }
             CalculatorImplementation instance = CalculatorType.from(choice).getInstance();
 
@@ -42,18 +47,19 @@ public class Application {
 
         int operationChoice = 0;
 
-        System.out.println("Choose operation:");
-        System.out.println("1. Addition");
-        System.out.println("2. Subtraction");
-        System.out.println("3. Multiplication");
-        System.out.println("4. Division");
-        System.out.print("Enter operation choice (1-4): ");
+        log.info("Choose operation:");
+        log.info("1. Addition");
+        log.info("2. Subtraction");
+        log.info("3. Multiplication");
+        log.info("4. Division");
+
+        log.info("Enter operation choice (1-4): ");
 
         operationChoice = scanner.nextInt();
 
-        System.out.print("Enter first number: ");
+        log.info("Enter first number: ");
         double num1 = scanner.nextDouble();
-        System.out.print("Enter second number: ");
+        log.info("Enter second number: ");
         double num2 = scanner.nextDouble();
 
         switch (operationChoice) {
@@ -74,22 +80,23 @@ public class Application {
                 basicCalc.print(result);
                 break;
             default:
-                System.out.println("Invalid choice!");
+                log.info("Invalid choice!");
         }
     }
 
     private void performScientificCalculations(ScientificCalculator scientificCalc) {
         int operationChoice = 0;
 
-        System.out.println("Choose operation:");
-        System.out.println("1. Sin");
-        System.out.println("2. Cos");
-        System.out.println("3. Tan");
+        log.info("Choose operation:");
+        log.info("1. Sin");
+        log.info("2. Cos");
+        log.info("3. Tan");
 
-        System.out.print("Enter operation choice (1-3): ");
+        log.info("Enter operation choice (1-3): ");
+
         operationChoice = scanner.nextInt();
 
-        System.out.print("Enter angle in degrees: ");
+        log.info("Enter angle in degrees: ");
         double angle = 0;
 
         while (true) {
@@ -97,7 +104,7 @@ public class Application {
                 angle = scanner.nextDouble();
                 break;
             } else {
-                System.out.println("Invalid input! Please enter a valid angle.");
+                log.info("Invalid input! Please enter a valid angle.");
                 scanner.next();
             }
         }
@@ -116,7 +123,7 @@ public class Application {
                 scientificCalc.print(result);
                 break;
             default:
-                System.out.println("Invalid choice!");
+                log.info("Invalid choice!");
         }
     }
 }
