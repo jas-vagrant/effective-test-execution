@@ -1,8 +1,8 @@
-package com.testvagrant.example.factory;
+package com.testvagrant.example.enums;
 
-import com.testvagrant.example.Implementation.BasicCalculator;
-import com.testvagrant.example.Implementation.CalculatorImplementation;
-import com.testvagrant.example.Implementation.ScientificCalculator;
+import com.testvagrant.example.implementation.BasicCalculator;
+import com.testvagrant.example.implementation.CalculatorImplementation;
+import com.testvagrant.example.implementation.ScientificCalculator;
 
 import java.util.Arrays;
 
