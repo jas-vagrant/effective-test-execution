@@ -16,6 +16,7 @@
         <slf4j.version>2.0.9</slf4j.version>
         <jacoco.maven.version>0.8.10</jacoco.maven.version>
         <lombok.version>1.18.30</lombok.version>
+        <junit.surfire.version>1.0.2</junit.surfire.version>
     </properties>
 
 
@@ -58,7 +59,7 @@
                     <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.0.2</version>
+                        <version>${junit.surfire.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>org.junit.jupiter</groupId>
