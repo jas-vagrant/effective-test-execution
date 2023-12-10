@@ -22,10 +22,8 @@ for file in $file_changes; do
         while IFS= read -r line; do
             # Check if the line is a modified line
             if [[ $line =~ ^[@]{2}.*[+-]  ]]; then
-                echo "line  : $line"
                 # Extract the line number
                 line_number=$(echo "$line" | sed -n -E 's/^\@\@ [^+]*\+([0-9]+).*/\1/p')
-                echo "line_number : $line_number"
 
                   method_name=$(awk -v ln="$line_number" '
                     BEGIN { RS="{"; found=0 }
@@ -54,7 +52,6 @@ for file in $file_changes; do
                 method_name="${method_name%%(*}"
                 # Construct the fully qualified method name
                 fully_qualified_method="${class_path%.java}.${method_name}"
-                echo "Fully Qualified Method Name: $fully_qualified_method"
 
                 fully_qualified_methods+=($fully_qualified_method)
             fi

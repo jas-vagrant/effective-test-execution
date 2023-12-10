@@ -17,7 +17,7 @@ for element in "${array[@]}"; do
     json2=$(cat $testFile)
     testmethods=($(echo "$json2" | jq -r --arg key "$element" '.[$key][]'))
     for testmethod in "${testmethods[@]}"; do
-        echo "Method: $testmethod"
+        echo "Test Method: $testmethod"
         className="${testmethod%.*}"
         method="${testmethod##*.}"
         fullTestName="${className}#${method}"
