@@ -14,27 +14,27 @@ public class BasicCalculatorTest{
         basicCalculator = new BasicCalculator();
     }
     @Test
-    public void shouldAddTwoNumbers(){
+    public void testAddTwoNumbersSuccess(){
         result = basicCalculator.add(12, 14);
         Assertions.assertEquals(26,result,"The results are not matching");
     }
     @Test
-    public void shouldSubtractTwoNumbers(){
+    public void testSubtractTwoNumbersSuccess(){
         result = basicCalculator.subtract(4,2);
         Assertions.assertEquals(2,result,"The results are not matching");
     }
     @Test
-    public void shouldMultiplyTwoNumbers(){
+    public void testMultiplyTwoNumbersSuccess(){
         result = basicCalculator.multiply(10,4);
         Assertions.assertEquals(40,result,"The results are not matching");
     }
     @Test
-    public void shouldDivideTwoNumbers(){
+    public void testDivideTwoNumbersSuccess(){
         result = basicCalculator.divide(6,3);
         Assertions.assertEquals(2,result,"The results are not matching");
     }
     @Test
-    public void shouldTestDivideByZero(){
+    public void testDivideByZeroShouldReturnNaN(){
         result = basicCalculator.divide(8,0);
         Assertions.assertEquals(Double.NaN,result,"The results are not matching");
     }
