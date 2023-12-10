@@ -13,18 +13,18 @@ public class ScientificCalculatorTest {
         scientificCalculator = new ScientificCalculator();
     }
     @Test
-    public void shouldTestSinFunction(){
+    public void testSinFunctionSuccess(){
         result = scientificCalculator.sin(90);
         result = scientificCalculator.formatResult(result);
         Assertions.assertEquals(1,result,"The results are not matching");
     }
     @Test
-    public void shouldTestCosFunction(){
+    public void testCosFunctionSuccess(){
         result = scientificCalculator.cos(0);
         Assertions.assertEquals(1, scientificCalculator.formatResult(result),"The results are not matching");
     }
     @Test
-    public void shouldTestTanFunction(){
+    public void testTanFunctionSuccess(){
         result = scientificCalculator.tan(90);
         Assertions.assertEquals(1.633123935319537E16,result,"The results are not matching");
     }
