@@ -7,8 +7,8 @@ if [ "$#" -lt 2 ]; then
 fi
 
 # Read the filename and key from the command line arguments
-filename="$1"
-specified_key="$2"
+filename="src/main/resources/output.json"
+specified_key=$value
 
 # Add debugging statements
 echo "Filename: $filename"
@@ -27,13 +27,15 @@ if ! command -v jq &> /dev/null; then
 fi
 
 # Extract values associated with the specified key
-values=$(jq -r ".[\"$specified_key\"] | .[]" "$filename")
+testmethods=$(jq -r ".[\"$specified_key\"] | .[]" "$filename")
 
 # Check if the specified key exists
-if [ "$values" = "null" ]; then
+if [ "$testmethods" = "null" ]; then
   echo "Error: Key '$specified_key' not found in the JSON file."
   exit 1
 fi
 
 # Print the values associated with the specified key
-echo "$values"
+echo $testmethods
+
+export $testmethods
