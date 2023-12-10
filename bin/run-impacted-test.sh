@@ -3,7 +3,7 @@
 
 source get-local-changes.sh
 
-filename="modified-methods.json"
+filename="bin/modified-methods.json"
 testFile="output.json"
 
 json=$(cat $filename)

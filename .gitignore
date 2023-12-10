@@ -4,6 +4,7 @@
 .vscode/
 # Log file
 *.log
+bin/modified-methods.json
 
 # BlueJ files
 *.ctxt
