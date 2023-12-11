@@ -3,9 +3,9 @@
 This is a sample application project to demonstrate the execution of impacted tests 
 (tests that cover the source code change) instead of running the whole test suite.
 This is achieved by instrumenting the source code changes using a custom java agent - 
-[byte-buddy-agent](https://github.com/TV-hackathon-2023/byte-busters) which generates 
+[byte-buddy-agent](https://github.com/TV-hackathon-2023/byte-busters). Thsi custom agent generates 
 a `source-tests-map.json` containing source-code-methods mapped to corresponding list of covering test-methods.
-And then utilising the bash script `run-impacted-test.sh` to run only the impacted tests.
+With the help of bash script `run-impacted-test.sh` one can now run only the impacted tests based on the modifications done in the sourceCode in local.
 
 
 
