@@ -5,6 +5,7 @@
 # Log file
 *.log
 bin/modified-methods.json
+bin/tests-map.json
 
 # BlueJ files
 *.ctxt
