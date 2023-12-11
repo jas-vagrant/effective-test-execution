@@ -3,8 +3,10 @@
 
 source get-local-changes.sh
 
+cp src/main/resources/source-tests-map.json bin/tests-map.json
+
 filename="bin/modified-methods.json"
-testFile="output.json"
+testFile="bin/tests-map.json"
 
 json=$(cat $filename)
 
@@ -27,4 +29,4 @@ done
 
 mvntest="${mvntest%,}"
 
-mvn test -Dtest="$mvntest"
+mvn clean test -Prun-impacted-tests -Dtest="$mvntest"
