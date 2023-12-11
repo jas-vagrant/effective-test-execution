@@ -17,6 +17,9 @@
         <jacoco.maven.version>0.8.10</jacoco.maven.version>
         <lombok.version>1.18.30</lombok.version>
         <junit.surfire.version>1.0.2</junit.surfire.version>
+        <bytebuddy.agent.path>
+            /Users/jaspreetsingh/IdeaProjects/byte-buddy-agent/target/byte-buddy-agent-1.0-SNAPSHOT-jar-with-dependencies.jar
+        </bytebuddy.agent.path>
     </properties>
 
 
@@ -49,6 +52,25 @@
             <version>${lombok.version}</version>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>run-all-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <argument>-javaagent:${bytebuddy.agent.path}</argument>
+            </properties>
+        </profile>
+        <profile>
+            <id>run-impacted-tests</id>
+            <properties>
+                <argument></argument>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -63,9 +85,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <argLine>
-                        -javaagent:/Users/jaspreetsingh/IdeaProjects/byte-buddy-agent/target/byte-buddy-agent-1.0-SNAPSHOT-jar-with-dependencies.jar
-                    </argLine>
+                    <argLine>${argument}</argLine>
                 </configuration>
             </plugin>
             <plugin>
