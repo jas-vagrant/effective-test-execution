@@ -11,7 +11,14 @@ With the help of bash script `run-impacted-test.sh` one can now run only the imp
 
 ### Steps to run impacted tests :
 **Step 1 :** Add [byte-buddy-agent.jar](https://github.com/TV-hackathon-2023/byte-busters) path in `pom.xml` 
-in `<properties>` in  `<bytebuddy.agent.path>`.
+as shown in below example -
+```
+<properties>
+    <bytebuddy.agent.path>
+        {your-local-path-to-custom-byte-buddy-agent.jar}
+    </bytebuddy.agent.path>
+ </properties>
+```
 
 **Step 2 :** Execute the bash script `run-all-tests.sh` to generate `source-tests-map.json`. 
 It is generated at path `src/main/resources`. (It can be maintained unchanged in the `master` branch until new tests are added).
