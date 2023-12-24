@@ -1,0 +1,3 @@
+{
+  "com.testvagrant.example.implementation.BasicCalculator.add" : [ "com.testvagrant.example.BasicCalculatorTest.testAddTwoNumbersSuccess" ]
+}

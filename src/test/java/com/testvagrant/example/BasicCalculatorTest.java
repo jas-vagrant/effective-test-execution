@@ -38,4 +38,14 @@ public class BasicCalculatorTest{
         result = basicCalculator.divide(8,0);
         Assertions.assertEquals(Double.NaN,result,"The results are not matching");
     }
+    @Test
+    public void testMultiplyWithInnerTrue(){
+        result = basicCalculator.multiplyWithInner(8,0, true);
+        Assertions.assertEquals(0,result,"The results are not matching");
+    }
+    @Test
+    public void testMultiplyWithInnerFalse(){
+        result = basicCalculator.multiplyWithInner(8,0, false);
+        Assertions.assertEquals(0,result,"The results are not matching");
+    }
 }
