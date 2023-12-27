@@ -1,3 +1,14 @@
 {
-  "com.testvagrant.example.implementation.BasicCalculator.add" : [ "com.testvagrant.example.BasicCalculatorTest.testAddTwoNumbersSuccess" ]
+  "com.testvagrant.example.implementation.InnerClass.secondInnerMethod" : [ "com.testvagrant.example.BasicCalculatorTest.testMultiplyWithInnerFalse" ],
+  "com.testvagrant.example.implementation.BasicCalculator.multiply" : [ "com.testvagrant.example.BasicCalculatorTest.testMultiplyTwoNumbersSuccess" ],
+  "com.testvagrant.example.implementation.BasicCalculator.multiplyWithInner" : [ "com.testvagrant.example.BasicCalculatorTest.testMultiplyWithInnerFalse", "com.testvagrant.example.BasicCalculatorTest.testMultiplyWithInnerTrue" ],
+  "com.testvagrant.example.implementation.ScientificCalculator.tan" : [ "com.testvagrant.example.ScientificCalculatorTest.testTanFunctionSuccess" ],
+  "com.testvagrant.example.implementation.InnerClass.firstInnerMethod" : [ "com.testvagrant.example.BasicCalculatorTest.testMultiplyWithInnerTrue", "com.testvagrant.example.BasicCalculatorTest.testMultiplyTwoNumbersSuccess" ],
+  "com.testvagrant.example.implementation.BasicCalculator.subtract" : [ "com.testvagrant.example.BasicCalculatorTest.testSubtractTwoNumbersSuccess" ],
+  "com.testvagrant.example.implementation.CalculatorImplementation.formatResult" : [ "com.testvagrant.example.ScientificCalculatorTest.testSinFunctionSuccess", "com.testvagrant.example.ScientificCalculatorTest.testCosFunctionSuccess" ],
+  "com.testvagrant.example.implementation.BasicCalculator.divide" : [ "com.testvagrant.example.BasicCalculatorTest.testDivideTwoNumbersSuccess", "com.testvagrant.example.BasicCalculatorTest.testDivideByZeroShouldReturnNaN" ],
+  "com.testvagrant.example.implementation.ScientificCalculator.sin" : [ "com.testvagrant.example.ScientificCalculatorTest.testSinFunctionSuccess" ],
+  "com.testvagrant.example.implementation.ScientificCalculator.cos" : [ "com.testvagrant.example.ScientificCalculatorTest.testCosFunctionSuccess" ],
+  "com.testvagrant.example.implementation.BasicCalculator.add" : [ "com.testvagrant.example.BasicCalculatorTest.testAddTwoNumbersSuccess" ],
+  "com.testvagrant.example.implementation.BasicCalculator.privateMethod" : [ "com.testvagrant.example.BasicCalculatorTest.testSubtractTwoNumbersSuccess" ]
 }
